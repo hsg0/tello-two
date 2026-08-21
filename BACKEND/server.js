@@ -26,7 +26,6 @@ const startServer = async () => {
     await connectDB();
 
     app.listen(port, () => {
-      console.log("Connected to MongoDB");
       console.log("Server is running on port", port);
       console.log(`Tello API listening on http://localhost:${port}`);
     });
