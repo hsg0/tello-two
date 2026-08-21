@@ -22,5 +22,52 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@keyframes tello-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tello-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tello-spin-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.tello-fade-up {
+  animation: tello-fade-up 0.7s ease-out both;
+}
+
+.tello-fade-up-delay-1 {
+  animation: tello-fade-up 0.7s ease-out 0.1s both;
+}
+
+.tello-fade-up-delay-2 {
+  animation: tello-fade-up 0.7s ease-out 0.2s both;
+}
+
+.tello-fade-up-delay-3 {
+  animation: tello-fade-up 0.7s ease-out 0.3s both;
+}
+
+.tello-orbit {
+  animation: tello-spin 48s linear infinite;
+}
+
+.tello-orbit-reverse {
+  animation: tello-spin-reverse 32s linear infinite;
 }
